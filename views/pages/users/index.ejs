@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User</title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+    </head>
+    <body>
+        <h1>List Users <%= users.length %></h1>
+        <a href="/users/create">Add</a>
+        <ul>
+            <!-- IF ISSET USERS -->
+            <% if(users.length > 0) { %>
+                <!-- FOREACH -->
+                <% users.forEach(function(user){ %>
+                    <li>
+                        <a href="/user/<%= user.id %> ">
+                            <%= user.name.toUpperCase() %>
+                        </a>
+                    </li>
+                <% }); %>
+
+            <!-- ELSE -->
+            <% }else { %>
+                <p>Data kosong</p>
+            <% } %> 
+        </ul>
+    </body>
+</html>
