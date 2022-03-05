@@ -14,7 +14,7 @@ const usersSchema = new Schema({
         type: Number,
         required: true,
     },
-    alamat: {
+    address: {
         type: String,
         required: false,
     },

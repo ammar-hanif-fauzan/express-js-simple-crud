@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User</title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+    </head>
+    <body>
+    <a href="/users">Back</a>
+      <h1>Detail</h1>
+    <ul>
+      <!-- MongoDb -->
+      <li>Name : <strong><%= user.name %></strong> </li>
+      <li>Phone : <strong><%= user.phone %></strong> </li>
+      <li>Address : <strong><%= user.address %></strong> </li>
+    </ul>
+    
+    <a href="/user/<%= user._id %>/edit">Edit</a>
+    <a href="/user/<%= user._id %>">Delete</a>
+
+  </body>
+</html>

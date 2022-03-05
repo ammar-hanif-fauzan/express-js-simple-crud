@@ -6,6 +6,11 @@
     </head>
     <body>
         <h1>List Users <%= users.length %></h1>
+        <form action="/users  ">
+            <input type="text" name="search">
+            <button type="submit">Cari</button>
+        </form>
+        <br>
         <a href="/users/create">Add</a>
         <ul>
             <!-- IF ISSET USERS -->
@@ -13,8 +18,8 @@
                 <!-- FOREACH -->
                 <% users.forEach(function(user){ %>
                     <li>
-                        <a href="/user/<%= user.id %> ">
-                            <%= user.name.toUpperCase() %>
+                        <a href="/user/<%= user._id %> ">
+                            <%= user.name %>
                         </a>
                     </li>
                 <% }); %>

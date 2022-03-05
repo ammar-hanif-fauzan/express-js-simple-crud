@@ -7,14 +7,12 @@ const UserController = require('../controllers/usersController');
 //   res.send('respond with a resource');
 // });
 
-router.get('/users', UserController.index)
-
-// router.route('/users')
-//   .get(userController.index)
-//   .post(userController.store)
+router.route('/users')
+  .get(UserController.index)
+  .post(UserController.store)
 
 router.get('/users/create', UserController.create)
-// router.get('/user/:id', userController.show)
+router.get('/user/:id', UserController.show)
 // router.get('/user/:id/edit', userController.edit)
 // router.post('/user/:id', userController.update)
 // router.delete('/user/:userId', userController.destroy)
