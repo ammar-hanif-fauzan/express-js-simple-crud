@@ -12,11 +12,16 @@ main().catch(err => console.log(err));
 async function main() {
   await mongoose.connect('mongodb://localhost:27017/express_js_simple_crud');
 }
-
+// end of koneksi mongodb
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+
+// keep this before all routes that will use pagination
+const paginate = require('express-paginate')
+app.use(paginate.middleware(10, 50));
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

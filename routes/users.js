@@ -13,8 +13,8 @@ router.route('/users')
 
 router.get('/users/create', UserController.create)
 router.get('/user/:id', UserController.show)
-// router.get('/user/:id/edit', userController.edit)
-// router.post('/user/:id', userController.update)
-// router.delete('/user/:userId', userController.destroy)
+router.get('/user/:id/edit', UserController.edit)
+router.put('/user/:id', UserController.update)
+router.delete('/user/:id', UserController.destroy)
 
 module.exports = router;
